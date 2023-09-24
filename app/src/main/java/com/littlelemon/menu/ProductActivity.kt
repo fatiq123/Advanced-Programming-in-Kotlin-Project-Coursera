@@ -1,6 +1,5 @@
 package com.littlelemon.menu
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -10,7 +9,6 @@ class ProductActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val intent = Intent(this@ProductActivity, MainActivity::class.java)
         val title = intent.getStringExtra(KEY_TITLE)
         val price = intent.getDoubleExtra(KEY_PRICE, 0.0)
         val image = intent.getIntExtra(KEY_IMAGE, -1)

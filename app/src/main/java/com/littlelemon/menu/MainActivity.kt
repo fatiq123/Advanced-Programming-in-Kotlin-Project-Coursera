@@ -34,12 +34,11 @@ class MainActivity : ComponentActivity() {
 
     private fun startProductActivity(productItem: ProductItem) {
         //TODO instantiate intent and pass extra parameter from product
-        val intent = Intent(this@MainActivity, ProductActivity::class.java).also {
-            it.putExtra(ProductActivity.KEY_TITLE, "")
-            it.putExtra(ProductActivity.KEY_PRICE, "")
-            it.putExtra(ProductActivity.KEY_IMAGE, "")
-            it.putExtra(ProductActivity.KEY_CATEGORY, "")
-
+        val intent = Intent(this@MainActivity, ProductActivity::class.java).apply {
+            putExtra(ProductActivity.KEY_TITLE, productItem.title)
+            putExtra(ProductActivity.KEY_PRICE, productItem.price)
+            putExtra(ProductActivity.KEY_IMAGE, productItem.image)
+            putExtra(ProductActivity.KEY_CATEGORY, productItem.category)
         }
         startActivity(intent)
     }
