@@ -6,7 +6,7 @@ class FilterHelper {//TODO create a FilterHelperTest and write a unit test for f
         return when (type) {
             FilterType.All -> productsList
             FilterType.Dessert -> productsList.filter { it.category == "Dessert" }
-            FilterType.Drinks -> productsList.filter { it.category == "Drink" }
+            FilterType.Drinks -> productsList.filter { it.category == "Drinks" }
             FilterType.Food -> productsList.filter { it.category == "Food" }
         }
     }
